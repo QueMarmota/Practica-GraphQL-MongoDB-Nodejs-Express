@@ -24,3 +24,34 @@ Para esta practica se utilizaron las siguientes dependencias
 Esta practica consiste en utilizar Graphql integrado con mongoDB , nodeJS y Express 
 para una aplicacion la cual maneja carros en la cual puede agregar eliminar modificar y consultar Carros
 por medio de /graphql
+
+
+
+QUERYS EN GRAPHQL
+
+{
+  allCars{
+    _id
+    name
+  }
+  car(_id:"1"){
+    _id
+    name
+  }
+}
+mutation{
+  createCar(_id:"1",name:"carro2"){
+    name 	
+  }
+}
+mutation{
+  deleteCar(name:"carro2"){
+    name
+  }
+}
+mutation{
+  updateCar(_id:"1",name:"CarroAct"){
+    _id
+    name
+  }
+}
